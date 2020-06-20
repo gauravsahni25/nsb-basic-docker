@@ -1,0 +1,14 @@
+version: '3'
+services:
+  transport:
+    image: 'rabbitmq:management'
+    ports:
+      - "15672:15672"
+  sqlserver:
+    image: 'mcr.microsoft.com/mssql/server'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Docker@007
+    ports:
+      - "1433:1433"
+    
