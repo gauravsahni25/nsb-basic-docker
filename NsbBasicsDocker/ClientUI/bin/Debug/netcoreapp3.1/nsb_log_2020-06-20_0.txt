@@ -1,0 +1,4 @@
+﻿2020-06-20 13:11:50.487 INFO  Logging to 'E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\' with level Info
+2020-06-20 13:11:50.588 INFO  No valid license could be found. Falling back to trial license with start date '2020-06-20'.
+2020-06-20 13:12:02.514 INFO  Initiating shutdown.
+2020-06-20 13:12:02.525 INFO  Shutdown complete.
