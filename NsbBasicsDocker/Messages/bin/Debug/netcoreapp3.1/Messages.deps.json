@@ -6,13 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "ClientUI/1.0.0": {
+      "Messages/1.0.0": {
         "dependencies": {
-          "Messages": "1.0.0",
           "NServiceBus": "7.3.0"
         },
         "runtime": {
-          "ClientUI.dll": {}
+          "Messages.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
@@ -147,19 +146,11 @@
             "fileVersion": "4.700.19.56404"
           }
         }
-      },
-      "Messages/1.0.0": {
-        "dependencies": {
-          "NServiceBus": "7.3.0"
-        },
-        "runtime": {
-          "Messages.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "ClientUI/1.0.0": {
+    "Messages/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -261,11 +252,6 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
-    },
-    "Messages/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

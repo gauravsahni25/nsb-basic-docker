@@ -22,3 +22,5 @@ E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\runti
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\obj\Debug\netcoreapp3.1\ClientUI.csproj.CopyComplete
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\obj\Debug\netcoreapp3.1\ClientUI.dll
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\obj\Debug\netcoreapp3.1\ClientUI.pdb
+E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\Messages.dll
+E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\Messages.pdb

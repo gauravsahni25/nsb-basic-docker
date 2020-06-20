@@ -2,3 +2,36 @@
 2020-06-20 13:11:50.588 INFO  No valid license could be found. Falling back to trial license with start date '2020-06-20'.
 2020-06-20 13:12:02.514 INFO  Initiating shutdown.
 2020-06-20 13:12:02.525 INFO  Shutdown complete.
+2020-06-20 16:22:58.598 INFO  Logging to 'E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\' with level Info
+2020-06-20 16:22:58.759 INFO  No valid license could be found. Falling back to trial license with start date '2020-06-20'.
+2020-06-20 16:22:58.931 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:07.735 INFO  Sending PlaceOrder command, OrderId = eb69aa69-7b93-4f79-8329-9333a9e866bd
+2020-06-20 16:23:07.839 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:07.902 INFO  Received PlaceOrder, OrderId = eb69aa69-7b93-4f79-8329-9333a9e866bd
+2020-06-20 16:23:42.778 INFO  Sending PlaceOrder command, OrderId = 2fb448bb-736e-42bf-be9b-b71d80e3a3cf
+2020-06-20 16:23:42.786 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:42.797 INFO  Received PlaceOrder, OrderId = 2fb448bb-736e-42bf-be9b-b71d80e3a3cf
+2020-06-20 16:23:44.250 INFO  Sending PlaceOrder command, OrderId = 6c7c9aba-a05e-462d-835e-993c691e1fa9
+2020-06-20 16:23:44.254 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:44.276 INFO  Received PlaceOrder, OrderId = 6c7c9aba-a05e-462d-835e-993c691e1fa9
+2020-06-20 16:23:44.938 INFO  Sending PlaceOrder command, OrderId = 9966b23b-7117-49a0-8ab7-0268e778afe7
+2020-06-20 16:23:44.943 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:44.963 INFO  Received PlaceOrder, OrderId = 9966b23b-7117-49a0-8ab7-0268e778afe7
+2020-06-20 16:23:45.410 INFO  Sending PlaceOrder command, OrderId = 91fd489a-3eaa-4539-8be2-7932162f783d
+2020-06-20 16:23:45.414 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:45.424 INFO  Received PlaceOrder, OrderId = 91fd489a-3eaa-4539-8be2-7932162f783d
+2020-06-20 16:23:46.066 INFO  Sending PlaceOrder command, OrderId = 1eeb84c2-546e-408a-b0fe-645683091953
+2020-06-20 16:23:46.071 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:46.086 INFO  Received PlaceOrder, OrderId = 1eeb84c2-546e-408a-b0fe-645683091953
+2020-06-20 16:23:46.562 INFO  Sending PlaceOrder command, OrderId = f54fa437-59be-42e3-823c-4140206eb0bb
+2020-06-20 16:23:46.566 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:46.586 INFO  Received PlaceOrder, OrderId = f54fa437-59be-42e3-823c-4140206eb0bb
+2020-06-20 16:23:47.050 INFO  Sending PlaceOrder command, OrderId = ff3012b9-7a93-41ce-b8c6-a34792348953
+2020-06-20 16:23:47.055 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:47.063 INFO  Received PlaceOrder, OrderId = ff3012b9-7a93-41ce-b8c6-a34792348953
+2020-06-20 16:23:47.450 INFO  Sending PlaceOrder command, OrderId = acc4672e-89b9-4fc4-80a7-afa25253ea3d
+2020-06-20 16:23:47.454 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:47.478 INFO  Received PlaceOrder, OrderId = acc4672e-89b9-4fc4-80a7-afa25253ea3d
+2020-06-20 16:23:48.042 INFO  Sending PlaceOrder command, OrderId = afa1700d-a2ac-4e9a-ad3c-43c522f506e2
+2020-06-20 16:23:48.046 INFO  Press 'P' to place an order, or 'Q' to quit.
+2020-06-20 16:23:48.069 INFO  Received PlaceOrder, OrderId = afa1700d-a2ac-4e9a-ad3c-43c522f506e2

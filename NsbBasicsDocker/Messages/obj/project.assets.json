@@ -208,19 +208,6 @@
             "rid": "win"
           }
         }
-      },
-      "Messages/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "NServiceBus": "7.3.0"
-        },
-        "compile": {
-          "bin/placeholder/Messages.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Messages.dll": {}
-        }
       }
     }
   },
@@ -766,16 +753,10 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "Messages/1.0.0": {
-      "type": "project",
-      "path": "../Messages/Messages.csproj",
-      "msbuildProject": "../Messages/Messages.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Messages >= 1.0.0",
       "NServiceBus >= 7.3.0"
     ]
   },
@@ -786,11 +767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\ClientUI\\ClientUI.csproj",
-      "projectName": "ClientUI",
-      "projectPath": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\ClientUI\\ClientUI.csproj",
+      "projectUniqueName": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Messages\\Messages.csproj",
+      "projectName": "Messages",
+      "projectPath": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Messages\\Messages.csproj",
       "packagesPath": "C:\\Users\\kingl\\.nuget\\packages\\",
-      "outputPath": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\ClientUI\\obj\\",
+      "outputPath": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Messages\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -808,11 +789,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {
-            "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Messages\\Messages.csproj": {
-              "projectPath": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Messages\\Messages.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
