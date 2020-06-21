@@ -11,19 +11,31 @@ namespace ClientUI
         static ILog log = LogManager.GetLogger<Program>();
         static async Task Main(string[] args)
         {
-            Console.Title = "Client UI";
-            
-            var endpointConfiguration = new EndpointConfiguration("ClientUI");
+            const string endpointName = "ClientUI";
 
-            var transport = endpointConfiguration.UseTransport<LearningTransport>();
+            Console.Title = endpointName;
+            
+            var endpointConfiguration = ConfigureEndpointAndRouting(endpointName);
 
             var endpointInstance = await Endpoint.Start(endpointConfiguration).ConfigureAwait(false);
             await RunLoop(endpointInstance)
                 .ConfigureAwait(false);
 
+            
             await endpointInstance.Stop()
                 .ConfigureAwait(false);
 
+        }
+
+        private static EndpointConfiguration ConfigureEndpointAndRouting(string endpointName)
+        {
+            var endpointConfiguration = new EndpointConfiguration(endpointName);
+            var transport = endpointConfiguration.UseTransport<LearningTransport>();
+            
+            var routing = transport.Routing();
+            routing.RouteToEndpoint(typeof(PlaceOrder), "Sales");
+            
+            return endpointConfiguration;
         }
 
         private static async Task RunLoop(IEndpointInstance endpointInstance)
@@ -45,7 +57,7 @@ namespace ClientUI
 
                         // Send the command to the local endpoint
                         log.Info($"Sending PlaceOrder command, OrderId = {command.OrderId}");
-                        await endpointInstance.SendLocal(command)
+                        await endpointInstance.Send(command)
                             .ConfigureAwait(false);
 
                         break;

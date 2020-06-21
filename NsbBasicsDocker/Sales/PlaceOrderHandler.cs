@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Messages.Commands;
 using NServiceBus;
 using NServiceBus.Logging;
 
-namespace ClientUI
+namespace Sales
 {
     public class PlaceOrderHandler : IHandleMessages<PlaceOrder>
     {

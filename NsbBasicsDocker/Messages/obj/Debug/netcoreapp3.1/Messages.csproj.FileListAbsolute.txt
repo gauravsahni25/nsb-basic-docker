@@ -1,8 +1,7 @@
 E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\bin\Debug\netcoreapp3.1\Messages.deps.json
 E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\bin\Debug\netcoreapp3.1\Messages.dll
-E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\obj\Debug\netcoreapp3.1\Messages.csprojAssemblyReference.cache
+E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\bin\Debug\netcoreapp3.1\Messages.pdb
 E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\obj\Debug\netcoreapp3.1\Messages.AssemblyInfoInputs.cache
 E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\obj\Debug\netcoreapp3.1\Messages.AssemblyInfo.cs
-E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\bin\Debug\netcoreapp3.1\Messages.pdb
 E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\obj\Debug\netcoreapp3.1\Messages.dll
 E:\Distributed\nsb-basics\NsbBasicsDocker\Messages\obj\Debug\netcoreapp3.1\Messages.pdb
