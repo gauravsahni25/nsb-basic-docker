@@ -13,6 +13,7 @@ namespace Shipping
 
             var endpointConfiguration = new EndpointConfiguration(endpointName);
             endpointConfiguration.UseTransport<LearningTransport>();
+            var persistence = endpointConfiguration.UsePersistence<LearningPersistence>();
 
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
                 .ConfigureAwait(false);

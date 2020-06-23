@@ -7,4 +7,8 @@ namespace Messages.Commands
     {
         public string OrderId { get; set; }
     }
+    public class ShipOrder : ICommand
+    {
+        public string OrderId { get; set; }
+    }
 }
