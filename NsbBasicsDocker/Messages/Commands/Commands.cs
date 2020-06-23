@@ -11,4 +11,9 @@ namespace Messages.Commands
     {
         public string OrderId { get; set; }
     }
+    public class CancelOrder
+        : ICommand
+    {
+        public string OrderId { get; set; }
+    }
 }

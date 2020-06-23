@@ -27,6 +27,7 @@ namespace Sales
         {
             var endpointConfiguration = new EndpointConfiguration(endpointName);
             var transport = endpointConfiguration.UseTransport<LearningTransport>();
+            var persistence = endpointConfiguration.UsePersistence<LearningPersistence>();
             return endpointConfiguration;
         }
     }
