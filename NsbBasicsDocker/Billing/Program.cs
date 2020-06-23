@@ -26,8 +26,17 @@ namespace Billing
         private static EndpointConfiguration ConfigureEndpoint(string endpointName)
         {
             var endpointConfiguration = new EndpointConfiguration(endpointName);
-            var transport = endpointConfiguration.UseTransport<LearningTransport>();
+            ConfigureTransport(endpointConfiguration);
             return endpointConfiguration;
+        }
+
+        private static void ConfigureTransport(EndpointConfiguration endpointConfiguration)
+        {
+            //var transport = endpointConfiguration.UseTransport<LearningTransport>();
+            var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
+            endpointConfiguration.EnableInstallers();
+            transport.ConnectionString("host=localhost;username=guest;password=guest");
+            transport.UseConventionalRoutingTopology();
         }
     }
 }

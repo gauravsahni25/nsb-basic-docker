@@ -12,7 +12,8 @@ namespace Shipping
             Console.Title = endpointName;
 
             var endpointConfiguration = new EndpointConfiguration(endpointName);
-            endpointConfiguration.UseTransport<LearningTransport>();
+            ConfigureTransport(endpointConfiguration);
+
             var persistence = endpointConfiguration.UsePersistence<LearningPersistence>();
 
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
@@ -23,6 +24,15 @@ namespace Shipping
 
             await endpointInstance.Stop()
                 .ConfigureAwait(false);
+        }
+
+        private static void ConfigureTransport(EndpointConfiguration endpointConfiguration)
+        {
+            //endpointConfiguration.UseTransport<LearningTransport>();
+            var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
+            endpointConfiguration.EnableInstallers();
+            transport.ConnectionString("host=localhost;username=guest;password=guest");
+            transport.UseConventionalRoutingTopology();
         }
     }
 }

@@ -48,6 +48,10 @@
             "NServiceBus": {
               "target": "Package",
               "version": "[7.3.0, )"
+            },
+            "NServiceBus.RabbitMQ": {
+              "target": "Package",
+              "version": "[5.2.0, )"
             }
           },
           "imports": [

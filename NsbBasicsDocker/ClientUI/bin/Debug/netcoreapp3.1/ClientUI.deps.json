@@ -9,7 +9,8 @@
       "ClientUI/1.0.0": {
         "dependencies": {
           "Messages": "1.0.0",
-          "NServiceBus": "7.3.0"
+          "NServiceBus": "7.3.0",
+          "NServiceBus.RabbitMQ": "5.2.0"
         },
         "runtime": {
           "ClientUI.dll": {}
@@ -46,6 +47,26 @@
           "lib/netstandard2.0/NServiceBus.Core.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.3.0.0"
+          }
+        }
+      },
+      "NServiceBus.RabbitMQ/5.2.0": {
+        "dependencies": {
+          "NServiceBus": "7.3.0",
+          "RabbitMQ.Client": "5.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NServiceBus.Transport.RabbitMQ.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
+      "RabbitMQ.Client/5.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.0.0"
           }
         }
       },
@@ -184,6 +205,20 @@
       "sha512": "sha512-w+IyuMJePrUNfP9j3VdzgFgOJ4l09Gyx2IEmEhPPHfOWjJ8QJgqwS9dh1zpMzDBm9Z3riGt6b/7Hd0I0/LbF8g==",
       "path": "nservicebus/7.3.0",
       "hashPath": "nservicebus.7.3.0.nupkg.sha512"
+    },
+    "NServiceBus.RabbitMQ/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cMSm3CJFMCYSmUB1N4SvEiDbtKBG4lwWgQHMyK3sBj452Jjp0vD3cunV7vemOyw8mq4vhVZjGSRnWN1CG7wH7Q==",
+      "path": "nservicebus.rabbitmq/5.2.0",
+      "hashPath": "nservicebus.rabbitmq.5.2.0.nupkg.sha512"
+    },
+    "RabbitMQ.Client/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WY73qFhekwALxI+YTf97WkeWjnQXZFjkSc1oCwZ7Pz/XwOthBotr9ty3DhU2F7GuzU0HHyO9z9uW6AXr+TyhLQ==",
+      "path": "rabbitmq.client/5.2.0",
+      "hashPath": "rabbitmq.client.5.2.0.nupkg.sha512"
     },
     "System.Drawing.Common/4.7.0": {
       "type": "package",

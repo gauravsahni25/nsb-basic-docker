@@ -6,6 +6,8 @@ E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\Clien
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\ClientUI.pdb
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\NServiceBus.Core.dll
+E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\NServiceBus.Transport.RabbitMQ.dll
+E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
 E:\Distributed\nsb-basics\NsbBasicsDocker\ClientUI\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Xml.dll

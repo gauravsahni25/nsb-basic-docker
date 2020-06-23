@@ -30,13 +30,23 @@ namespace ClientUI
         private static EndpointConfiguration ConfigureEndpointAndRouting(string endpointName)
         {
             var endpointConfiguration = new EndpointConfiguration(endpointName);
-            var transport = endpointConfiguration.UseTransport<LearningTransport>();
-            
+            var transport = ConfigureTransport(endpointConfiguration);
+
             var routing = transport.Routing();
             routing.RouteToEndpoint(typeof(PlaceOrder), "Sales");
             routing.RouteToEndpoint(typeof(CancelOrder), "Sales");
 
             return endpointConfiguration;
+        }
+
+        private static TransportExtensions<RabbitMQTransport> ConfigureTransport(EndpointConfiguration endpointConfiguration)
+        {
+            // var transport = endpointConfiguration.UseTransport<LearningTransport>();
+            endpointConfiguration.EnableInstallers();
+            var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
+            transport.ConnectionString("host=localhost;username=guest;password=guest");
+            transport.UseConventionalRoutingTopology();
+            return transport;
         }
 
         private static async Task RunLoop(IEndpointInstance endpointInstance)

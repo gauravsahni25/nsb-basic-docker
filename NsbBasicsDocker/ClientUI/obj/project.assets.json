@@ -44,6 +44,28 @@
           "lib/netstandard2.0/NServiceBus.Core.dll": {}
         }
       },
+      "NServiceBus.RabbitMQ/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NServiceBus": "[7.2.3, 8.0.0)",
+          "RabbitMQ.Client": "[5.2.0, 6.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NServiceBus.Transport.RabbitMQ.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NServiceBus.Transport.RabbitMQ.dll": {}
+        }
+      },
+      "RabbitMQ.Client/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
+        }
+      },
       "System.Drawing.Common/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -293,6 +315,47 @@
         "tools/init.ps1",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "NServiceBus.RabbitMQ/5.2.0": {
+      "sha512": "cMSm3CJFMCYSmUB1N4SvEiDbtKBG4lwWgQHMyK3sBj452Jjp0vD3cunV7vemOyw8mq4vhVZjGSRnWN1CG7wH7Q==",
+      "type": "package",
+      "path": "nservicebus.rabbitmq/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "NServiceBus.png",
+        "lib/net452/NServiceBus.Transport.RabbitMQ.dll",
+        "lib/net452/NServiceBus.Transport.RabbitMQ.pdb",
+        "lib/net452/NServiceBus.Transport.RabbitMQ.xml",
+        "lib/netstandard2.0/NServiceBus.Transport.RabbitMQ.dll",
+        "lib/netstandard2.0/NServiceBus.Transport.RabbitMQ.pdb",
+        "lib/netstandard2.0/NServiceBus.Transport.RabbitMQ.xml",
+        "nservicebus.rabbitmq.5.2.0.nupkg.sha512",
+        "nservicebus.rabbitmq.nuspec"
+      ]
+    },
+    "RabbitMQ.Client/5.2.0": {
+      "sha512": "WY73qFhekwALxI+YTf97WkeWjnQXZFjkSc1oCwZ7Pz/XwOthBotr9ty3DhU2F7GuzU0HHyO9z9uW6AXr+TyhLQ==",
+      "type": "package",
+      "path": "rabbitmq.client/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net451/RabbitMQ.Client.dll",
+        "lib/net451/RabbitMQ.Client.pdb",
+        "lib/net451/RabbitMQ.Client.xml",
+        "lib/netstandard1.5/RabbitMQ.Client.dll",
+        "lib/netstandard1.5/RabbitMQ.Client.pdb",
+        "lib/netstandard1.5/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.pdb",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.5.2.0.nupkg.sha512",
+        "rabbitmq.client.nuspec"
       ]
     },
     "System.Drawing.Common/4.7.0": {
@@ -776,7 +839,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Messages >= 1.0.0",
-      "NServiceBus >= 7.3.0"
+      "NServiceBus >= 7.3.0",
+      "NServiceBus.RabbitMQ >= 5.2.0"
     ]
   },
   "packageFolders": {
@@ -827,6 +891,10 @@
           "NServiceBus": {
             "target": "Package",
             "version": "[7.3.0, )"
+          },
+          "NServiceBus.RabbitMQ": {
+            "target": "Package",
+            "version": "[5.2.0, )"
           }
         },
         "imports": [
