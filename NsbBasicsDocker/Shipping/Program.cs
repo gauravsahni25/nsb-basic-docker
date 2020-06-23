@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using NServiceBus;
 
 namespace Shipping
@@ -11,10 +12,7 @@ namespace Shipping
 
             Console.Title = endpointName;
 
-            var endpointConfiguration = new EndpointConfiguration(endpointName);
-            ConfigureTransport(endpointConfiguration);
-
-            var persistence = endpointConfiguration.UsePersistence<LearningPersistence>();
+            var endpointConfiguration = ConfigureEndpoint(endpointName);
 
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
                 .ConfigureAwait(false);
@@ -24,6 +22,28 @@ namespace Shipping
 
             await endpointInstance.Stop()
                 .ConfigureAwait(false);
+        }
+
+        private static EndpointConfiguration ConfigureEndpoint(string endpointName)
+        {
+            var endpointConfiguration = new EndpointConfiguration(endpointName);
+            ConfigurePersistence(endpointConfiguration);
+            ConfigureTransport(endpointConfiguration);
+            return endpointConfiguration;
+        }
+
+        private static void ConfigurePersistence(EndpointConfiguration endpointConfiguration)
+        {
+            var persistence = endpointConfiguration.UsePersistence<SqlPersistence>();
+            var connection = "Data Source=localhost;Initial Catalog=NsbBasicsDocker;User Id=sa;pwd=Docker@123";
+            persistence.SqlDialect<SqlDialect.MsSqlServer>();
+            persistence.ConnectionBuilder(
+                connectionBuilder: () =>
+                {
+                    return new SqlConnection(connection);
+                });
+            var subscriptions = persistence.SubscriptionSettings();
+            subscriptions.CacheFor(TimeSpan.FromMinutes(1));
         }
 
         private static void ConfigureTransport(EndpointConfiguration endpointConfiguration)
