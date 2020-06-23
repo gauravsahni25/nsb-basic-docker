@@ -33,6 +33,7 @@ namespace Shipping
             endpointConfiguration.EnableInstallers();
             transport.ConnectionString("host=localhost;username=guest;password=guest");
             transport.UseConventionalRoutingTopology();
+            endpointConfiguration.AuditProcessedMessagesTo("personalQueueForAudit");
         }
     }
 }

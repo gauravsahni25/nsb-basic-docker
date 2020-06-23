@@ -37,6 +37,7 @@ namespace Billing
             endpointConfiguration.EnableInstallers();
             transport.ConnectionString("host=localhost;username=guest;password=guest");
             transport.UseConventionalRoutingTopology();
+            endpointConfiguration.AuditProcessedMessagesTo("personalQueueForAudit");
         }
     }
 }

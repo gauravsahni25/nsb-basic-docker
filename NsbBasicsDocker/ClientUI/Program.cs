@@ -46,6 +46,7 @@ namespace ClientUI
             var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
             transport.ConnectionString("host=localhost;username=guest;password=guest");
             transport.UseConventionalRoutingTopology();
+            endpointConfiguration.AuditProcessedMessagesTo("personalQueueForAudit");
             return transport;
         }
 
