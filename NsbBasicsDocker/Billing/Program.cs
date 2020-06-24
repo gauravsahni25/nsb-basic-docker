@@ -26,8 +26,8 @@ namespace Billing
         private static EndpointConfiguration ConfigureEndpoint(string endpointName)
         {
             var endpointConfiguration = new EndpointConfiguration(endpointName);
-            ConfigureSerialization(endpointConfiguration);
-            ConfigureTransport(endpointConfiguration);
+            //ConfigureSerialization(endpointConfiguration);
+            //ConfigureTransport(endpointConfiguration);
             return endpointConfiguration;
         }
 

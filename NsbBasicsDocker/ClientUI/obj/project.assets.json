@@ -253,6 +253,22 @@
           }
         }
       },
+      "Commons/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Messages": "1.0.0",
+          "NServiceBus": "7.3.0",
+          "NServiceBus.Newtonsoft.Json": "2.2.0",
+          "NServiceBus.RabbitMQ": "5.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Commons.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Commons.dll": {}
+        }
+      },
       "Messages/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -908,6 +924,11 @@
         "version.txt"
       ]
     },
+    "Commons/1.0.0": {
+      "type": "project",
+      "path": "../Commons/Commons.csproj",
+      "msbuildProject": "../Commons/Commons.csproj"
+    },
     "Messages/1.0.0": {
       "type": "project",
       "path": "../Messages/Messages.csproj",
@@ -916,6 +937,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Commons >= 1.0.0",
       "Messages >= 1.0.0",
       "NServiceBus >= 7.3.0",
       "NServiceBus.Newtonsoft.Json >= 2.2.0",
@@ -952,6 +974,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Commons\\Commons.csproj": {
+              "projectPath": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Commons\\Commons.csproj"
+            },
             "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Messages\\Messages.csproj": {
               "projectPath": "E:\\Distributed\\nsb-basics\\NsbBasicsDocker\\Messages\\Messages.csproj"
             }

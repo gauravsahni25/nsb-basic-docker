@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "ClientUI/1.0.0": {
         "dependencies": {
+          "Commons": "1.0.0",
           "Messages": "1.0.0",
           "NServiceBus": "7.3.0",
           "NServiceBus.Newtonsoft.Json": "2.2.0",
@@ -190,6 +191,17 @@
           }
         }
       },
+      "Commons/1.0.0": {
+        "dependencies": {
+          "Messages": "1.0.0",
+          "NServiceBus": "7.3.0",
+          "NServiceBus.Newtonsoft.Json": "2.2.0",
+          "NServiceBus.RabbitMQ": "5.2.0"
+        },
+        "runtime": {
+          "Commons.dll": {}
+        }
+      },
       "Messages/1.0.0": {
         "dependencies": {
           "NServiceBus": "7.3.0"
@@ -331,6 +343,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "Commons/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Messages/1.0.0": {
       "type": "project",

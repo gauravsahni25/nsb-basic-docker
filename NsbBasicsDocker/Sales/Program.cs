@@ -27,10 +27,9 @@ namespace Sales
         private static EndpointConfiguration ConfigureEndpoint(string endpointName)
         {
             var endpointConfiguration = new EndpointConfiguration(endpointName);
-            ConfigureSerialization(endpointConfiguration);
+            //ConfigureSerialization(endpointConfiguration);
+            //ConfigureTransport(endpointConfiguration);
             ConfigurePersistence(endpointConfiguration);
-            ConfigureTransport(endpointConfiguration);
-            
             return endpointConfiguration;
         }
 
