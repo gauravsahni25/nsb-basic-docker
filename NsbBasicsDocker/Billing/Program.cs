@@ -12,14 +12,15 @@ namespace Billing
 
             Console.Title = endpointName;
 
-            var endpointConfiguration = ConfigureEndpoint(endpointName);
-            var endpointInstance = await Endpoint.Start(endpointConfiguration)
-                .ConfigureAwait(false);
+            var endpointInstance = await Endpoint
+                                .Start(new EndpointConfiguration(endpointName))
+                                .ConfigureAwait(false);
 
             Console.WriteLine("Press Enter to exit.");
             Console.ReadLine();
 
-            await endpointInstance.Stop()
+            await endpointInstance
+                .Stop()
                 .ConfigureAwait(false);
         }
 
@@ -48,3 +49,8 @@ namespace Billing
         }
     }
 }
+
+// Old Code
+//var endpointConfiguration = ConfigureEndpoint(endpointName);
+//var endpointInstance = await Endpoint.Start(endpointConfiguration)
+//    .ConfigureAwait(false);

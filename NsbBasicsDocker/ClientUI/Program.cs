@@ -15,14 +15,16 @@ namespace ClientUI
 
             Console.Title = endpointName;
             
-            var endpointConfiguration = ConfigureEndpointAndRouting(endpointName);
+            var endpointInstance = await Endpoint
+                                .Start(new EndpointConfiguration(endpointName))
+                                .ConfigureAwait(false);
 
-            var endpointInstance = await Endpoint.Start(endpointConfiguration).ConfigureAwait(false);
             await RunLoop(endpointInstance)
                 .ConfigureAwait(false);
 
             
-            await endpointInstance.Stop()
+            await endpointInstance
+                .Stop()
                 .ConfigureAwait(false);
 
         }
@@ -103,3 +105,5 @@ namespace ClientUI
         }
     }
 }
+// Old Code
+// var endpointInstance = await Endpoint.Start(endpointConfiguration).ConfigureAwait(false);

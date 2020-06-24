@@ -20,7 +20,8 @@ namespace Shipping
             Console.WriteLine("Press Enter to exit.");
             Console.ReadLine();
 
-            await endpointInstance.Stop()
+            await endpointInstance
+                .Stop()
                 .ConfigureAwait(false);
         }
 
