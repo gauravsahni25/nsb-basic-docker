@@ -26,8 +26,15 @@ namespace Billing
         private static EndpointConfiguration ConfigureEndpoint(string endpointName)
         {
             var endpointConfiguration = new EndpointConfiguration(endpointName);
+            ConfigureSerialization(endpointConfiguration);
             ConfigureTransport(endpointConfiguration);
             return endpointConfiguration;
+        }
+
+        private static void ConfigureSerialization(EndpointConfiguration endpointConfiguration)
+        {
+            endpointConfiguration.UseSerialization<NewtonsoftSerializer>();
+            //endpointConfiguration.AddDeserializer<XmlSerializer>();
         }
 
         private static void ConfigureTransport(EndpointConfiguration endpointConfiguration)

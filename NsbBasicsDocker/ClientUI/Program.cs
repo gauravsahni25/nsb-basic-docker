@@ -30,16 +30,17 @@ namespace ClientUI
         private static EndpointConfiguration ConfigureEndpointAndRouting(string endpointName)
         {
             var endpointConfiguration = new EndpointConfiguration(endpointName);
-            var transport = ConfigureTransport(endpointConfiguration);
-
-            var routing = transport.Routing();
-            routing.RouteToEndpoint(typeof(PlaceOrder), "Sales");
-            routing.RouteToEndpoint(typeof(CancelOrder), "Sales");
-
+            ConfigureSerialization(endpointConfiguration);
+            ConfigureTransport(endpointConfiguration);
             return endpointConfiguration;
         }
 
-        private static TransportExtensions<RabbitMQTransport> ConfigureTransport(EndpointConfiguration endpointConfiguration)
+        private static void ConfigureSerialization(EndpointConfiguration endpointConfiguration)
+        {
+            endpointConfiguration.UseSerialization<NewtonsoftSerializer>();
+        }
+
+        private static void ConfigureTransport(EndpointConfiguration endpointConfiguration)
         {
             // var transport = endpointConfiguration.UseTransport<LearningTransport>();
             endpointConfiguration.EnableInstallers();
@@ -47,7 +48,11 @@ namespace ClientUI
             transport.ConnectionString("host=localhost;username=guest;password=guest");
             transport.UseConventionalRoutingTopology();
             endpointConfiguration.AuditProcessedMessagesTo("personalQueueForAudit");
-            return transport;
+            
+            // Command Routing
+            var routing = transport.Routing();
+            routing.RouteToEndpoint(typeof(PlaceOrder), "Sales");
+            routing.RouteToEndpoint(typeof(CancelOrder), "Sales");
         }
 
         private static async Task RunLoop(IEndpointInstance endpointInstance)

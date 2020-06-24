@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[7.3.0, )"
             },
+            "NServiceBus.Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "NServiceBus.RabbitMQ": {
               "target": "Package",
               "version": "[5.2.0, )"

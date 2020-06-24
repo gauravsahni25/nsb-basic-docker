@@ -27,9 +27,16 @@ namespace Shipping
         private static EndpointConfiguration ConfigureEndpoint(string endpointName)
         {
             var endpointConfiguration = new EndpointConfiguration(endpointName);
+            ConfigureSerialization(endpointConfiguration);
             ConfigurePersistence(endpointConfiguration);
             ConfigureTransport(endpointConfiguration);
             return endpointConfiguration;
+        }
+
+        private static void ConfigureSerialization(EndpointConfiguration endpointConfiguration)
+        {
+            endpointConfiguration.UseSerialization<NewtonsoftSerializer>();
+            //endpointConfiguration.AddDeserializer<NewtonsoftSerializer>();
         }
 
         private static void ConfigurePersistence(EndpointConfiguration endpointConfiguration)

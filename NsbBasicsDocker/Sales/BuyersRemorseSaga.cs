@@ -23,7 +23,7 @@ namespace Sales
             Data.OrderId = message.OrderId;
 
             log.Info($"Starting cool down period for order #{Data.OrderId}.");
-            await RequestTimeout(context, TimeSpan.FromSeconds(20), new BuyersRemorseIsOver()); // context, time to delay, actual message that will be sent whe the timeout is over
+            await RequestTimeout(context, TimeSpan.FromSeconds(5), new BuyersRemorseIsOver()); // context, time to delay, actual message that will be sent whe the timeout is over
         }
 
         public async Task Timeout(BuyersRemorseIsOver state, IMessageHandlerContext context)

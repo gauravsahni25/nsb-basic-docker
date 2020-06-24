@@ -29,6 +29,15 @@
           }
         }
       },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "NServiceBus/7.3.0": {
         "type": "package",
         "dependencies": {
@@ -42,6 +51,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/NServiceBus.Core.dll": {}
+        }
+      },
+      "NServiceBus.Newtonsoft.Json/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NServiceBus": "[7.0.0, 8.0.0)",
+          "Newtonsoft.Json": "[12.0.1, 13.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NServiceBus.Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NServiceBus.Newtonsoft.Json.dll": {}
         }
       },
       "NServiceBus.RabbitMQ/5.2.0": {
@@ -293,6 +315,45 @@
         "version.txt"
       ]
     },
+    "Newtonsoft.Json/12.0.1": {
+      "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
     "NServiceBus/7.3.0": {
       "sha512": "w+IyuMJePrUNfP9j3VdzgFgOJ4l09Gyx2IEmEhPPHfOWjJ8QJgqwS9dh1zpMzDBm9Z3riGt6b/7Hd0I0/LbF8g==",
       "type": "package",
@@ -315,6 +376,23 @@
         "tools/init.ps1",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "NServiceBus.Newtonsoft.Json/2.2.0": {
+      "sha512": "DYmVN4EwAm21bBft6Xv4Pjc+zwz9LrzEVcrBJ2SHteORiQT+7xT2EjHrI7jjlW/7Dv3pid5x2YatR8HnH3jN9w==",
+      "type": "package",
+      "path": "nservicebus.newtonsoft.json/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/NServiceBus.Newtonsoft.Json.dll",
+        "lib/net452/NServiceBus.Newtonsoft.Json.pdb",
+        "lib/net452/NServiceBus.Newtonsoft.Json.xml",
+        "lib/netstandard2.0/NServiceBus.Newtonsoft.Json.dll",
+        "lib/netstandard2.0/NServiceBus.Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/NServiceBus.Newtonsoft.Json.xml",
+        "nservicebus.newtonsoft.json.2.2.0.nupkg.sha512",
+        "nservicebus.newtonsoft.json.nuspec"
       ]
     },
     "NServiceBus.RabbitMQ/5.2.0": {
@@ -840,6 +918,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Messages >= 1.0.0",
       "NServiceBus >= 7.3.0",
+      "NServiceBus.Newtonsoft.Json >= 2.2.0",
       "NServiceBus.RabbitMQ >= 5.2.0"
     ]
   },
@@ -891,6 +970,10 @@
           "NServiceBus": {
             "target": "Package",
             "version": "[7.3.0, )"
+          },
+          "NServiceBus.Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "NServiceBus.RabbitMQ": {
             "target": "Package",
