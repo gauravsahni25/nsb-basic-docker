@@ -10,7 +10,7 @@
     <PackageReference Include="NServiceBus.Newtonsoft.Json" Version="2.2.0" />
     <PackageReference Include="NServiceBus.Persistence.Sql" Version="5.0.0" />
     <PackageReference Include="NServiceBus.RabbitMQ" Version="5.2.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
   <ItemGroup>
